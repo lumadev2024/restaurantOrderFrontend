@@ -6,6 +6,7 @@ const api = axios.create({
 });
 
 export const getTables = () => api.get('/tables');
+export const createTable = (number, seats) => api.post('/tables', { number, seats });
 export const createOrder = (tableId) => api.post('/orders', { tableId });
 export const addItem = (orderId, item) => api.post(`/orders/${orderId}/items`, item);
 export const closeOrder = (orderId) => api.put(`/orders/${orderId}/close`);

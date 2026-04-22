@@ -130,6 +130,7 @@ function OrderPage() {
             tables={tables}
             loading={loading}
             onSelect={handleTableSelect}
+            onTableCreated={(newTable) => setTables((prev) => [...prev, newTable])}
           />
         ) : (
           <div className="p-4 space-y-4">
